@@ -1,9 +1,16 @@
-how-the-task-was-done
-=====================
+
 #!/bin/sh
 
 variable=$1
 var=$2
+
+
+echo "type 'diskspace' for getting the current available disk space"
+echo "type 'ports' for getting the current open ports"
+echo "type 'services' for getting the current running services"
+echo "type 'password' for changing the password of a particular username"
+echo "type 'killprocess' to kill a process/application via PID"
+echo "type 'exit' to exit out of the process"
 
 case $variable in
 
@@ -11,7 +18,7 @@ case $variable in
 
       "ports") echo -e "Current open ports : `netstat -an`";;
 
-   "services") echo -e "Current running services : `chkconfig --list`";;
+   "services") echo -e "Current running services : `services --status-all`";;
 
    "password") echo -e "To change password use : `passwd $USERNAME`";;
 
