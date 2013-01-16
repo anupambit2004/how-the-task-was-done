@@ -1,0 +1,8 @@
+chmod 777 script.sh
+
+./script.sh diskspace  
+./script.sh ports
+./script.sh services
+./script.sh password
+./script.sh killprocess
+./script.sh exit
